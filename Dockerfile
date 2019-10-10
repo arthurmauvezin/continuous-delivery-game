@@ -1,7 +1,6 @@
-from debian:sid
-run sed -e 's/deb.debian.org/debian.mirrors.ovh.net/g' -i /etc/apt/sources.list
-run apt-get update \
-    && apt-get install -y \
+FROM debian
+RUN apt-get -y -q update --no-install-recommends \
+ && apt-get -y -q install --no-install-recommends \
       bundler \
       fonts-linuxlibertine \
       inotify-tools \
@@ -10,9 +9,17 @@ run apt-get update \
       pdftk \
       poppler-utils \
       ruby \
-    && apt-get clean 
-add Gemfile /workspace/Gemfile
-add Gemfile.lock /workspace/Gemfile.lock
-workdir /workspace
-run bundle install 
-add . /workspace
+ && apt-get clean autoclean \
+ && apt-get autoremove --yes \
+ && rm -rf /var/lib/{apt,dpkg,cache,log}/
+RUN apt-get -y -q update --no-install-recommends \
+ && apt-get -y -q install --no-install-recommends \
+      ruby-dev \
+ && apt-get clean autoclean \
+ && apt-get autoremove --yes \
+ && rm -rf /var/lib/{apt,dpkg,cache,log}/
+COPY Gemfile /workspace/Gemfile
+COPY Gemfile.lock /workspace/Gemfile.lock
+WORKDIR /workspace
+RUN bundle install 
+COPY . /workspace
