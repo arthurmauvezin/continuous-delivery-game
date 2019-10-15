@@ -2,8 +2,8 @@
 
 How to generate :
 ```
-docker build -t card-game .
-docker run -i -t card-game /bin/bash
-  ruby deck.rb
-docker cp 39c92f73f6ea://workspace/_output .
+docker build -t card-builder .
+docker run -it --rm --name card-builder card-builder bash
+  rake verso
+docker cp card-builder:/usr/src/app/_verso/cards_fr-verso.pdf cards_fr-verso.pdf
 ```

@@ -83,6 +83,7 @@ make_cards(Cards2.description_fr, "cards_fr.pdf")
 # levels
 LevelCards = YAML.load_file('data/levels.yml')
 LevelCards2 = yaml2dataframe(LevelCards)
+#make_cards(LevelCards2.title, "levels.pdf")
 
 # Squib::Deck.new(cards: LevelCards.size, layout: 'layout-cards.yml') do
 #   background color: 'white'

@@ -1,25 +1,19 @@
-FROM debian
+FROM ruby:2.4.9-slim-stretch
+
 RUN apt-get -y -q update --no-install-recommends \
  && apt-get -y -q install --no-install-recommends \
-      bundler \
-      fonts-linuxlibertine \
-      inotify-tools \
+      gcc \
       libcairo2-dev \
-      libpango1.0-dev \
+      make \
       pdftk \
       poppler-utils \
-      ruby \
  && apt-get clean autoclean \
  && apt-get autoremove --yes \
  && rm -rf /var/lib/{apt,dpkg,cache,log}/
-RUN apt-get -y -q update --no-install-recommends \
- && apt-get -y -q install --no-install-recommends \
-      ruby-dev \
- && apt-get clean autoclean \
- && apt-get autoremove --yes \
- && rm -rf /var/lib/{apt,dpkg,cache,log}/
-COPY Gemfile /workspace/Gemfile
-COPY Gemfile.lock /workspace/Gemfile.lock
-WORKDIR /workspace
-RUN bundle install 
-COPY . /workspace
+
+WORKDIR /usr/src/app
+
+COPY Gemfile Gemfile.lock ./
+RUN bundle install
+
+COPY . .
