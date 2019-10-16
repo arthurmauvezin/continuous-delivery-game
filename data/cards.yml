@@ -349,3 +349,94 @@
   textcolor: dark_text
   iconcolor: black
   cardPos: cardC
+
+- title: OPERATION
+  icon: icons/rocket.svg
+  theme: License to prod
+  description_fr: |
+    Tout membre de l'équipe a réussi à obtenir la licence de production avant d'accéder à la production via la solution informatique IAM utilisée pas mo napplication
+  description_en: |
+    Tout membre de l'équipe a réussi à obtenir la licence de production avant d'accéder à la production via la solution informatique IAM utilisée pas mo napplication
+  tags: '#production #licensetoprod'
+  cardcolor: operation_color
+  textcolor: light_text
+  iconcolor: #000000
+  cardPos: cardA
+
+- title: OPERATION
+  icon: icons/rocket.svg
+  theme: Event, incident, problem
+  description_fr: |
+    Un event permet aux équipes d'analyser et résoudre de manière proactive les incidents avant qu'ils n'affectent les utilisateurs. Un incident peut perturber ou réduire la qualité d'un service et impacte les activités des utilisateurs. Un problème est la cause fondamentale d'un ou plusieurs incidents
+  description_en: |
+    Un event permet aux équipes d'analyser et résoudre de manière proactive les incidents avant qu'ils n'affectent les utilisateurs. Un incident peut perturber ou réduire la qualité d'un service et impacte les activités des utilisateurs. Un problème est la cause fondamentale d'un ou plusieurs incidents
+  tags: '#event #incident #problem'
+  cardcolor: operation_color
+  textcolor: light_text
+  iconcolor: #000000
+  cardPos: cardB
+
+- title: OPERATION
+  icon: icons/rocket.svg
+  theme: Continuity of service
+  description_fr: |
+    Les besoins en assistance informatique métier sont gérés selon une configuration définie, anticipée et communiquée, y compris les événements récurrents (expiry, week-end, infrastructure, jours fériés) et non récurrents (éléctions générales)
+  description_en: |
+    Les besoins en assistance informatique métier sont gérés selon une configuration définie, anticipée et communiquée, y compris les événements récurrents (expiry, week-end, infrastructure, jours fériés) et non récurrents (éléctions générales)
+  tags: '#infraday #majorchangeweek'
+  cardcolor: operation_color
+  textcolor: light_text
+  iconcolor: #000000
+  cardPos: cardC
+
+- title: BEST PRACTICES
+  icon: icons/global.svg
+  theme: Practices & processes
+  description_fr: |
+    L'activité de production est suivie et trackée dans les outils adéquats suivant les pratiques et processus IT et les différents tickets sont visibles et priorisés dans le backlog de l'équipe
+  description_en: |
+    L'activité de production est suivie et trackée dans les outils adéquats suivant les pratiques et processus IT et les différents tickets sont visibles et priorisés dans le backlog de l'équipe
+  tags: '#process #itsm #itil #impulse'
+  cardcolor: bestpractices_color
+  textcolor: light_text
+  iconcolor: #000000
+  cardPos: cardA
+
+- title: BEST PRACTICES
+  icon: icons/global.svg
+  theme: Support & process
+  description_fr: |
+    En fonction de mes besoins métiers, je m'assure qu'une équipe de support est en mesusre de répondre aux demandes et de gérer les incidents sur leurs heures oubrables (en fonction du SLA)
+  description_en: |
+    En fonction de mes besoins métiers, je m'assure qu'une équipe de support est en mesusre de répondre aux demandes et de gérer les incidents sur leurs heures oubrables (en fonction du SLA)
+  tags: '#production #followthesun #sla'
+  cardcolor: bestpractices_color
+  textcolor: light_text
+  iconcolor: #000000
+  cardPos: cardB
+
+- title: BEST PRACTICES
+  icon: icons/global.svg
+  theme: Knowledge management
+  description_fr: |
+    Je m'assure que les connaissances critiques de l'exécution des activités de production sont formalisées dans des documents partagés entre les équipes de production du monde entier
+  description_en: |
+    Je m'assure que les connaissances critiques de l'exécution des activités de production sont formalisées dans des documents partagés entre les équipes de production du monde entier
+  tags: '#knowledge #documents'
+  cardcolor: bestpractices_color
+  textcolor: light_text
+  iconcolor: #000000
+  cardPos: cardC
+
+- title: CONTRACT
+  icon: icons/document.svg
+  theme: SLA
+  description_fr: |
+    Je connais les processus métiers auxquels mon périmètre applicatif contribue et les accords de niveau de service associés. Je participe au processus de révision de ce contrat SLA (Service Level Agreement)
+  description_en: |
+    Je connais les processus métiers auxquels mon périmètre applicatif contribue et les accords de niveau de service associés. Je participe au processus de révision de ce contrat SLA (Service Level Agreement)
+  tags: '#sla #niveauxdeservice'
+  cardcolor: contract_color
+  textcolor: light_text
+  iconcolor: #000000
+  cardPos: cardA

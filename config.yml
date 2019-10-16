@@ -24,6 +24,9 @@ custom_colors:
   bizdev_partnership_color: '#99CC00'
   leadership_color: '#009242'
   people_color: '#66CCFF'
+  operation_color: '#A85200'
+  bestpractices_color: '#C0C0C0'
+  contract_color: '#B0E0E6'
 
   light_text: '#FFFFFF'
   dark_text: '#000000'
