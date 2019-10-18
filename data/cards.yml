@@ -354,9 +354,9 @@
   icon: icons/rocket.svg
   theme: License to prod
   description_fr: |
-    Tout membre de l'équipe a réussi à obtenir la licence de production avant d'accéder à la production via la solution informatique IAM utilisée pas mo napplication
+    Tout membre de l'équipe a réussi à obtenir la licence de production avant d'accéder à la production via la solution informatique IAM utilisée par mon application
   description_en: |
-    Tout membre de l'équipe a réussi à obtenir la licence de production avant d'accéder à la production via la solution informatique IAM utilisée pas mo napplication
+    Tout membre de l'équipe a réussi à obtenir la licence de production avant d'accéder à la production via la solution informatique IAM utilisée par mon application
   tags: '#production #licensetoprod'
   cardcolor: operation_color
   textcolor: light_text

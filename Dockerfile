@@ -11,9 +11,17 @@ RUN apt-get -y -q update --no-install-recommends \
  && apt-get autoremove --yes \
  && rm -rf /var/lib/{apt,dpkg,cache,log}/
 
-WORKDIR /usr/src/app
+RUN groupadd -g 1000 -r ruby \
+ && useradd --no-log-init -u 1000 -r -g ruby ruby
 
-COPY Gemfile Gemfile.lock ./
+WORKDIR /home/ruby/app
+
+COPY --chown=ruby:ruby Gemfile Gemfile.lock ./
 RUN bundle install
 
-COPY . .
+COPY --chown=ruby:ruby . .
+
+USER ruby
+
+ENTRYPOINT ["rake", "verso"]
+
